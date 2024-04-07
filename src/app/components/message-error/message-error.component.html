@@ -1,0 +1,8 @@
+@if(control.errors && control.touched) { @if(control.errors['required']){
+<div class="menssage-erro">Field required</div>
+} @if(control.errors['email']) {
+<div class="menssage-erro">Format invalid</div>
+} @if(control.errors['pattern']) {
+<div class="menssage-erro">Format invalid</div>
+
+} }

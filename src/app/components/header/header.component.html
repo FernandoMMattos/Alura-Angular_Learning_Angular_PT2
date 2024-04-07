@@ -1,5 +1,13 @@
 <header class="header">
   <img src="/assets/images/logo.png" alt="Imagem da Logo" class="logo" />
-  <img src="/assets/images/banner.png" alt="Imagem do banner" class="banner" />
-  <h1 class="title">Organize, <span>plug it in,</span> simplify!</h1>
+  @if(!inicialScreen) {
+    <div class="link">
+      <button routerLink="/list">
+        <img src="/assets/images/arrow-left.png" class="arrow" alt="" />
+        <a>Back</a>
+      </button>
+    </div>
+  }
+  <img [src]="bannerSrc" alt="Imagem do banner" class="banner" />
+  <h1 class="title" [innerText]="title"></h1>
 </header>

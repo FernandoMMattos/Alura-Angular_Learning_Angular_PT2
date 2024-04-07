@@ -1,0 +1,86 @@
+<app-container>
+  <app-header
+    [inicialScreen]="false"
+    [title]="'Add contact'"
+    [bannerSrc]="'assets/images/adicionar-contato.png'"
+  ></app-header>
+  <form [formGroup]="contactForm" (ngSubmit)="saveContact()">
+    <div class="image-contact" role="button">
+      <i class="material-icons">add</i>
+      <label for="avatar">Add a image to the contact</label>
+      <input
+        type="file"
+        accept="image/*"
+        id="avatar"
+        (change)="onSelectFile($event)"
+      />
+    </div>
+    @if(contactForm.get('avatar')?.value !== '') {
+    <figure>
+      <img
+        [src]="contactForm.get('avatar')?.value"
+        alt="Photo of the contact"
+      />
+    </figure>
+    }
+    <label for="name">Name</label>
+    <input
+      formControlName="name"
+      type="text"
+      id="name"
+      placeholder="Enter the name of the contact"
+    />
+    <app-message-error [control]="obtainControl('name')"></app-message-error>
+    <label for="number">Number</label>
+    <input
+      formControlName="number"
+      type="text"
+      id="number"
+      placeholder="Enter the number of the contact"
+      pattern="(\(?\d{2}\)?\s?)(9\d{4}\-?\d{4})"
+    />
+    <app-message-error [control]="obtainControl('number')"></app-message-error>
+
+    <label for="email">E-mail</label>
+    <input
+      formControlName="email"
+      type="email"
+      id="email"
+      placeholder="Enter the e-mail of the contact"
+    />
+    <app-message-error [control]="obtainControl('email')"></app-message-error>
+
+    <app-separator></app-separator>
+    <label for="birthday">Birthday</label>
+    <input formControlName="birthday" type="date" id="birthday" />
+    <label for="socials">Socials</label>
+    <div class="input-container">
+      <span class="span-http">http://</span>
+      <input
+        type="url"
+        id="socials"
+        placeholder="Add the page's URL"
+        formControlName="socials"
+      />
+    </div>
+    <label for="obs">Observation</label>
+    <textarea
+      formControlName="obs"
+      type="text"
+      id="obs"
+      placeholder="Enter a observation"
+    ></textarea>
+    <section class="buttons">
+      <button class="button-cancel" type="button" (click)="cancel()">
+        Cancel
+      </button>
+      <button
+        [ngClass]="contactForm.valid ? 'button-save' : 'button-disabled'"
+        type="submit"
+        [disabled]="contactForm.invalid"
+      >
+        Save
+      </button>
+    </section>
+  </form>
+</app-container>

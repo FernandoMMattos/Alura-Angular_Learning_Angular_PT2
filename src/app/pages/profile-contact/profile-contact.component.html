@@ -1,0 +1,44 @@
+<app-container>
+  <app-header
+    [title]="'Contact Profile'"
+    [bannerSrc]="'assets/images/perfil-contato.png'"
+    [inicialScreen]="false"
+  ></app-header>
+  <section class="profile">
+    <div class="image-profile">
+      <img [src]="contact.avatar" alt="profile picture" />
+      <h2>
+        <strong>{{ contact.name }}</strong>
+      </h2>
+    </div>
+    <ul>
+      <app-separator></app-separator>
+      <li>
+        <i class="material-icons">call</i>
+        <strong>Number</strong>
+      </li>
+      <li>{{ contact.number }}</li>
+      <li>
+        <i class="material-icons">mail</i>
+        <strong>Email</strong>
+      </li>
+      <li>{{ contact.email }}</li>
+      <li>
+        <i class="material-icons">event_available</i>
+        <strong>Birthday</strong>
+      </li>
+      <li>{{ contact.birthday }}</li>
+      <li>
+        <i class="material-icons">language</i>
+        <strong>Socials</strong>
+      </li>
+      <li>{{ contact.socials }}</li>
+    </ul>
+    <div class="buttons">
+      <button class="button-delete" (click)="deleteContact()">
+        Delete contact
+      </button>
+      <button class="button-edit">Edit</button>
+    </div>
+  </section>
+</app-container>

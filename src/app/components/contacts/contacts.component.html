@@ -1,5 +1,11 @@
 <section class="contact">
   <ul>
+    <img
+      [src]="avatar"
+      alt="avatar"
+      class="avatar"
+      [routerLink]="['/profile/', id]"
+    />
     <li>
       <strong>{{ name }}</strong>
     </li>
@@ -7,12 +13,14 @@
     <li>
       <button>
         <img
+          [routerLink]="['/form/', id]"
           src="/assets/images/pencil-square.png"
           alt="Icon of a pencil to edit contact"
         />
       </button>
       <button>
         <img
+          [routerLink]="['/profile/', id]"
           src="/assets/images/trash.png"
           alt="Icon of a trash to delete contact"
         />

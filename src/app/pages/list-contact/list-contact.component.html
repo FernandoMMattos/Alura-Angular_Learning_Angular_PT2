@@ -1,0 +1,28 @@
+<app-container>
+  <app-header
+    [inicialScreen]="true"
+    [bannerSrc]="'assets/images/banner.png'"
+    [title]="'Organize, plug it in, simplify!'"
+  ></app-header>
+  <input
+    type="search"
+    placeholder="Type it to search"
+    [(ngModel)]="filterByText"
+  />
+  <section class="add-contact">
+    <button routerLink="/form">
+      <img src="assets/images/plus.png" alt="" />
+      <span>Add contact</span>
+    </button>
+  </section>
+  @for (letter of alphabet; track letter) {
+  <app-separator>{{ letter }}</app-separator>
+  @for (contact of filterContactByFirstLetter(letter); track contact.id) {
+  <app-contacts
+    [name]="contact.name"
+    [number]="contact.number"
+    [id]="contact.id!"
+    [avatar]="contact.avatar"
+  ></app-contacts>
+  } }
+</app-container>

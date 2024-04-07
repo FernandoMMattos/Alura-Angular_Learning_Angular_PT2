@@ -1,0 +1,145 @@
+header .header-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .header-link img {
+  align-self: center;
+  margin-bottom: 56px;
+}
+
+header .header-link div {
+  display: flex;
+  align-self: flex-start;
+}
+
+header .header-link img.arrow {
+  margin: 0 8px;
+}
+
+header .header-link button {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+header .header-link a {
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0px;
+  color: #0d6efd;
+}
+
+header .header-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+}
+
+header .header-contact img {
+  margin-bottom: -30px;
+}
+
+h1 {
+  font-family: "Montserrat";
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #0d6efd;
+  margin: 12px 0;
+}
+
+.profile {
+  background: #e7f1ff;
+  width: 416px;
+  padding: 24px, 16px;
+  border-radius: 16px;
+}
+
+.profile ul {
+  list-style: none;
+  padding: 24px;
+}
+
+.profile li {
+  padding-bottom: 16px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile strong {
+  font-weight: 700;
+}
+
+.buttons {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px;
+  gap: 16px;
+  padding-bottom: 32px;
+}
+
+.button-delete,
+.button-edit {
+  width: 196px;
+  height: 41px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.button-delete {
+  color: #0d6efd;
+  background-color: #ffffff;
+  border: 1px solid #0d6efd;
+  cursor: pointer;
+}
+
+.button-edit {
+  color: #ffffff;
+  background-color: #0d6efd;
+  cursor: pointer;
+}
+
+.iamge-profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-top: 12px;
+  padding-left: 24px;
+  margin-top: 36px;
+}
+
+.iamge-profile img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+  color: #0d6efd;
+  padding-left: 12px;
+}
